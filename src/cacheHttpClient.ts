@@ -83,6 +83,7 @@ export async function getCacheEntry(
     const httpClient = createHttpClient();
     const resource = `cache?keys=${encodeURIComponent(keys.join(","))}`;
 
+	/** TODO - could be an array, possibly? Check PR */
     const response = await httpClient.getJson<ArtifactCacheEntry>(
         getCacheApiUrl(resource)
     );

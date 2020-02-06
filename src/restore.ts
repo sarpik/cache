@@ -19,6 +19,7 @@ async function run(): Promise<void> {
             return;
         }
 
+		/** TODO - handle multiple cachePaths, though not sure how - check the PR */
         const cachePath = utils.resolvePath(
             core.getInput(Inputs.Path, { required: true })
         );
